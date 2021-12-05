@@ -45,6 +45,8 @@ This is not an exhaustive list. It mostly covers use cases I personally use or c
 - :white_check_mark: Built-in stereo line-out sound
     - Available as output device "Internal Speakers".
     - I normally have wired speakers using the rear stereo line-out. Plugging headphone into my case's *front* line-out is *not autodetected*, but they will be detected and start working after a quick sleep/wake cycle.
+- :white_check_mark: Built-in line-in/microphone audio
+    - Available as input device "Internal Microphone".
 - :white_check_mark: Wi-Fi and Bluetooth
     - Verified WiFI using 802.11ac with WPA2.
     - Verified Bluetooth using AirDrop to and from real nearby Macs.
@@ -114,8 +116,6 @@ This is not an exhaustive list. It mostly covers use cases I personally use or c
     - Filevault *probably* works, but I don't have it enabled on this system (yet).
 - :grey_question: Apple Music, Apple TV
     - Apple Music *probably* works, but Apple TV *probably doesn't* work since it likely requires hardware Fairplay DRM decoding.
-- :grey_question: line-in/microphone audio
-    - I don't have a plain old line-in microphone to test with.
 - :grey_question: digital audio out and surround sound
     - Related options appear in System Preferences: Sound: Output, but I don't have the appropriate audio equipment to test.
 
