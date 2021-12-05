@@ -48,6 +48,38 @@ This is not an exhaustive list. It mostly covers use cases I personally use or c
 - :white_check_mark: Wi-Fi and Bluetooth
     - Verified WiFI using 802.11ac with WPA2.
     - Verified Bluetooth using AirDrop to and from real nearby Macs.
+- :white_check_mark: Ethernet (at least gigabit)
+    - Verified by connecting directly to another over ethernet computer and testing with `iperf3`.
+    - The computer on the other end only supports gigabit ethernet, and the test sufficiently maxed that out. I cannot confirm if the full 2.5 Gbps speed is available.
+        <details>
+        <summary>iperf3 server-side output</summary>
+        <pre>
+        ❯ iperf3 -s
+        -----------------------------------------------------------
+        Server listening on 5201 (test #1)
+        -----------------------------------------------------------
+        Accepted connection from 192.168.2.3, port 60656
+        [  5] local 192.168.2.1 port 5201 connected to 192.168.2.3 port 60657
+        [ ID] Interval           Transfer     Bitrate
+        [  5]   0.00-1.00   sec   111 MBytes   928 Mbits/sec
+        [  5]   1.00-2.00   sec   112 MBytes   940 Mbits/sec
+        [  5]   2.00-3.00   sec   112 MBytes   940 Mbits/sec
+        [  5]   3.00-4.00   sec   112 MBytes   940 Mbits/sec
+        [  5]   4.00-5.00   sec   112 MBytes   940 Mbits/sec
+        [  5]   5.00-6.00   sec   112 MBytes   940 Mbits/sec
+        [  5]   6.00-7.00   sec   112 MBytes   940 Mbits/sec
+        [  5]   7.00-8.00   sec   112 MBytes   940 Mbits/sec
+        [  5]   8.00-9.00   sec   112 MBytes   940 Mbits/sec
+        [  5]   9.00-10.00  sec   112 MBytes   940 Mbits/sec
+        [  5]  10.00-10.02  sec  1.80 MBytes   942 Mbits/sec
+        - - - - - - - - - - - - - - - - - - - - - - - - -
+        [ ID] Interval           Transfer     Bitrate
+        [  5]   0.00-10.02  sec  1.09 GBytes   939 Mbits/sec                  receiver
+        -----------------------------------------------------------
+        Server listening on 5201 (test #2)
+        -----------------------------------------------------------
+        </pre>
+        </details>
 - :white_check_mark: Sleep and wake from sleep via keyboard/mouse
     - System also wakes up and goes back to sleep periodically for the "Power Nap" setting.
 - :white_check_mark: Native NVRAM
@@ -71,9 +103,6 @@ This is not an exhaustive list. It mostly covers use cases I personally use or c
 
 - :grey_question: on-board HDMI
     - I switched to DisplayPort during initial install because the installer image gave only a black screen when using HDMI. I haven't bothered switching back to HDMI after completing the installation.
-- :grey_question: Ethernet
-    - I've been using the Wi-Fi card on `en1` from the start and haven't tried anything with `en0`.
-    - I've read may require setup using a command like `ifconfig en0 media 100baseTX`.
 - :x: Netflix in Safari
     - Native "Fairplay" DRM requires a supported AMD graphics card; I don't have one.
     - Firefox is my primary browser, and it supports Netflix DRM via the proprietary Widevine CMI plugin perfectly fine on the iGPU, as far as I can tell.
