@@ -119,6 +119,41 @@ This is not an exhaustive list. It mostly covers use cases I personally use or c
 - :grey_question: digital audio out and surround sound
     - Related options appear in System Preferences: Sound: Output, but I don't have the appropriate audio equipment to test.
 
+## USB Port Mapping
+
+My custom map removes all ports I couldn't identify, the internal Mystic Light RGB controller, and the USB type C port on the case front.
+
+Here are all the USB ports I could identify in my testing:
+
+| class                | port            | locationID | where     | my notes                                   |
+|----------------------|-----------------|------------|-----------|--------------------------------------------|
+| `AppleUSB20XHCIPort` | ` 1 (01000000)` | `14100000` | external  | `USB 3.2 Gen 1 5Gbps Type A` (upper, blue) |
+| `AppleUSB20XHCIPort` | ` 2 (02000000)` | `14200000` | external  | `USB 3.2 Gen 1 5Gbps Type A` (lower, blue) |
+| `AppleUSB20XHCIPort` | ` 3 (03000000)` | `14300000` | external  | `USB 3.2 Gen 2 10Gpbs Type A` (red)        |
+| `AppleUSB20XHCIPort` | ` 4 (04000000)` | `14400000` | external  | `USB 3.2 Gen 2 10Gpbs Type C`              |
+| `AppleUSB20XHCIPort` | ` 5 (05000000)` | `14500000` | *unknown* | *unknown*                                  |
+| `AppleUSB20XHCIPort` | ` 6 (06000000)` | `14600000` | *unknown* | *unknown*                                  |
+| `AppleUSB20XHCIPort` | ` 7 (07000000)` | `14700000` | internal  | `JUSB4` (front USB 3.0 Type A, left)       |
+| `AppleUSB20XHCIPort` | ` 8 (08000000)` | `14800000` | internal  | `JUSB4` (front USB 3.0 Type A, right)      |
+| `AppleUSB20XHCIPort` | ` 9 (09000000)` | `14900000` | external  | `USB 2.0 Type-A` (lower, black)            |
+| `AppleUSB20XHCIPort` | `10 (0a000000)` | `14a00000` | external  | `USB 2.0 Type-A` (upper, black)            |
+| `AppleUSB20XHCIPort` | `11 (0b000000)` | `14b00000` | internal  | `JUSB2` (Bluetooth PCIe card)              |
+| `AppleUSB20XHCIPort` | `12 (0c000000)` | `14c00000` | internal  | `MYSTIC LIGHT` (RGB LED controller)        |
+| `AppleUSB20XHCIPort` | `13 (0d000000)` | `14d00000` | internal  | `JUSB5` (front USB 3.1 Type C)             |
+| `AppleUSB20XHCIPort` | `14 (0e000000)` | `14e00000` | *unknown* | *unknown*                                  |
+| `AppleUSB20XHCIPort` | `15 (0f000000)` | `14f00000` | *unknown* | *unknown*                                  |
+| `AppleUSB20XHCIPort` | `16 (10000000)` | `14000000` | *unknown* | *unknown*                                  |
+| `AppleUSB30XHCIPort` | `17 (11000000)` | `14100000` | external  | `USB 3.2 Gen 1 5Gbps Type A` (upper, blue) |
+| `AppleUSB30XHCIPort` | `18 (12000000)` | `14200000` | external  | `USB 3.2 Gen 1 5Gbps Type A` (lower, blue) |
+| `AppleUSB30XHCIPort` | `19 (13000000)` | `14300000` | external  | `USB 3.2 Gen 2 10Gpbs Type C`              |
+| `AppleUSB30XHCIPort` | `20 (14000000)` | `14400000` | external  | `USB 3.2 Gen 2 10Gpbs Type A` (red)        |
+| `AppleUSB30XHCIPort` | `21 (15000000)` | `14500000` | *unknown* | *unknown*                                  |
+| `AppleUSB30XHCIPort` | `22 (16000000)` | `14600000` | *unknown* | *unknown*                                  |
+| `AppleUSB30XHCIPort` | `23 (17000000)` | `14700000` | internal  | `JUSB4` (front USB 3.0 Type A, left)       |
+| `AppleUSB30XHCIPort` | `24 (18000000)` | `14800000` | internal  | `JUSB4` (front USB 3.0 Type A, right)      |
+| `AppleUSB30XHCIPort` | `25 (19000000)` | `14900000` | internal  | `JUSB5` (front USB 3.1 Type C)             |
+| `AppleUSB30XHCIPort` | `26 (1a000000)` | `14a00000` | *unknown* | *unknown*                                  |
+
 ## Issues encountered along the journey
 
 Setting up OpenCore and getting to a working macOS desktop is not always an easy paint-by-numbers process. I did a fair bit of experimenting and digging through random forum posts and other people's `EFI` folders to figure out how to get my system to a reliable state. [Dortania's OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/) *and* the related docs are *absolutely critical reading materials*. Be very familiar with the process and technologies involved. Be comfortable working with the command line, restarting many times, checking your work, tweaking configs, rinse, and repeat.
