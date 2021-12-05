@@ -119,6 +119,43 @@ This is not an exhaustive list. It mostly covers use cases I personally use or c
 - :grey_question: digital audio out and surround sound
     - Related options appear in System Preferences: Sound: Output, but I don't have the appropriate audio equipment to test.
 
+## Binaries
+
+I have *not* included the various binaries for AMLs, drivers, kexts, etc. in this repo. You should *never* simply clone someone else's EFI repo and use it without verifying all of its parts! The contents of my actual EFI file tree and their sources are:
+
+- EFI
+    - BOOT
+        - `BOOTx64.efi` from [OpenCore-0.7.5-RELEASE.zip](https://github.com/acidanthera/OpenCorePkg/releases/download/0.7.5/OpenCore-0.7.5-RELEASE.zip)
+    - OC
+        - ACPI
+            - `SSDT-AWAC.aml` from [Getting-Started-With-ACPI](https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-AWAC.aml)
+            - `SSDT-EC-USBX-DESKTOP.aml` from [Getting-Started-With-ACPI](https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-EC-USBX-DESKTOP.aml)
+            - `SSDT-PLUG-DRTNIA.aml` from [Getting-Started-With-ACPI](https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-PLUG-DRTNIA.aml)
+            - `SSDT-RHUB.aml` from [Getting-Started-With-ACPI](https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-RHUB.aml)
+        - Drivers
+            - `HfsPlus.efi` from [OcBinaryData](https://github.com/acidanthera/OcBinaryData/blob/master/Drivers/HfsPlus.efi)
+            - `OpenLinuxBoot.efi` from [OpenCore-0.7.5-RELEASE.zip](https://github.com/acidanthera/OpenCorePkg/releases/download/0.7.5/OpenCore-0.7.5-RELEASE.zip)
+            - `OpenPartitionDxe.efi` from [OpenCore-0.7.5-RELEASE.zip](https://github.com/acidanthera/OpenCorePkg/releases/download/0.7.5/OpenCore-0.7.5-RELEASE.zip)
+            - `OpenRuntime.efi` from [OpenCore-0.7.5-RELEASE.zip](https://github.com/acidanthera/OpenCorePkg/releases/download/0.7.5/OpenCore-0.7.5-RELEASE.zip)
+            - `OpenUsbKbDxe.efi` from [OpenCore-0.7.5-RELEASE.zip](https://github.com/acidanthera/OpenCorePkg/releases/download/0.7.5/OpenCore-0.7.5-RELEASE.zip)
+            - `ext4_x64.efi` from [OcBinaryData](https://github.com/acidanthera/OcBinaryData/blob/master/Drivers/HfsPlus.efi)
+        - Kexts
+            - `AppleALC.kext` from [AppleALC-1.6.6-RELEASE.zip](https://github.com/acidanthera/AppleALC/releases/download/1.6.6/AppleALC-1.6.6-RELEASE.zip)
+            - `CPUFriend.kext` from [CPUFriend-1.2.4-RELEASE.zip](https://github.com/acidanthera/CPUFriend/releases/download/1.2.4/CPUFriend-1.2.4-RELEASE.zip)
+            - `CPUFriendDataProvider.kext` generated using [CPUFriendFriend](https://github.com/corpnewt/CPUFriendFriend) (which also needs to download [ResourceConverter.sh](https://raw.githubusercontent.com/acidanthera/CPUFriend/master/Tools/ResourceConverter.sh) and [iasl.zip](https://bitbucket.org/RehabMan/acpica/downloads/iasl.zip))
+            - `Lilu.kext` from [Lilu-1.5.7-RELEASE.zip](https://github.com/acidanthera/Lilu/releases/download/1.5.7/Lilu-1.5.7-RELEASE.zip)
+            - `LucyRTL8125Ethernet.kext` from [LucyRTL8125Ethernet-V1.1.0.zip](https://github.com/Mieze/LucyRTL8125Ethernet/releases/download/1.1.0/LucyRTL8125Ethernet-V1.1.0.zip)
+            - `NVMeFix.kext` from [NVMeFix-1.0.9-RELEASE.zip](https://github.com/acidanthera/NVMeFix/releases/download/1.0.9/NVMeFix-1.0.9-RELEASE.zip)
+            - `SMCProcessor.kext` from [VirtualSMC-1.2.7-RELEASE.zip](https://github.com/acidanthera/VirtualSMC/releases/download/1.2.7/VirtualSMC-1.2.7-RELEASE.zip)
+            - `SMCSuperIO.kext` from [VirtualSMC-1.2.7-RELEASE.zip](https://github.com/acidanthera/VirtualSMC/releases/download/1.2.7/VirtualSMC-1.2.7-RELEASE.zip)
+            - `USBMap.kext` generated using [USBMap](https://github.com/corpnewt/USBMap)
+            - `VirtualSMC.kext` from [VirtualSMC-1.2.7-RELEASE.zip](https://github.com/acidanthera/VirtualSMC/releases/download/1.2.7/VirtualSMC-1.2.7-RELEASE.zip)
+            - `WhateverGreen.kext` from [WhateverGreen-1.5.5-RELEASE.zip](https://github.com/acidanthera/WhateverGreen/releases/download/1.5.5/WhateverGreen-1.5.5-RELEASE.zip)
+        - `OpenCore.efi` from [OpenCore-0.7.5-RELEASE.zip](https://github.com/acidanthera/OpenCorePkg/releases/download/0.7.5/OpenCore-0.7.5-RELEASE.zip)
+        - Tools
+            - `OpenShell.efi` from [OpenCore-0.7.5-RELEASE.zip](https://github.com/acidanthera/OpenCorePkg/releases/download/0.7.5/OpenCore-0.7.5-RELEASE.zip)
+        - `config.plist` customized from [OpenCore-0.7.5-RELEASE.zip](https://github.com/acidanthera/OpenCorePkg/releases/download/0.7.5/OpenCore-0.7.5-RELEASE.zip)
+
 ## USB Port Mapping
 
 My custom map removes all ports I couldn't identify, the internal Mystic Light RGB controller, and the USB type C port on the case front.
