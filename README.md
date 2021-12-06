@@ -23,6 +23,32 @@ You can find my `config.plist` in this repository and many notes about current r
 - Power supply: [EVGA G5 650 W 80+ Gold Certified Fully Modular ATX Power Supply](https://pcpartpicker.com/product/3gJmP6/evga-g5-650-w-80-gold-certified-fully-modular-atx-power-supply-220-g5-0650-x1)
 - Case: [Fractal Design Meshify 2 ATX Mid Tower Case](https://pcpartpicker.com/product/Tjwkcf/fractal-design-meshify-2-atx-mid-tower-case-fd-c-mes2a-05)
 
+## Benchmarks
+
+During high-load benchmark runs, system temperature consistently plateaued around 63C. Normal idle operating temperature is 30C. At idle, the system is virutally silent. I have fan curves configured to scale with CPU temerature.
+
+<details>
+    <summary>Blender (macOS, CPU-only)</summary>
+    <a href="https://opendata.blender.org/benchmarks/31020542-ab74-4899-b17c-e68f59a7cf7d/" target="_blank"><img src="https://github.com/infinitewarp/hackintosh-opencore-msi-z490/blob/main/images/blender-cpu-macos.png"/></a>
+    <p>Not good, but serviceable. There are no Nvidia drivers for modern GPUs for macOS 10.14+. So, all Blender rendering is CPU-bound. Linux performance is dramatically better.</p>
+</details>
+
+<details>
+    <summary>Blender (Linux, RTX 3060 Ti with CUDA/Optix)</summary>
+    <a href="https://opendata.blender.org/benchmarks/e0c9f1a7-fe56-4b92-9fa8-5621bcf54cd5/" target="_blank"><img src="https://github.com/infinitewarp/hackintosh-opencore-msi-z490/blob/main/images/blender-gpu-linux.png"/></a>
+    <p>Much better! On Linux with Nvidia's drivers, Blender can use CUDA and Optix for <em>significantly</em> improved performance.</p>
+</details>
+
+<details>
+    <summary>Cinebench R23</summary>
+    <img src="https://github.com/infinitewarp/hackintosh-opencore-msi-z490/blob/main/images/cinebench-r23.png"/>
+</details>
+
+<details>
+    <summary>Geekbench 4</summary>
+    <img src="https://github.com/infinitewarp/hackintosh-opencore-msi-z490/blob/main/images/geekbench-4.png"/>
+</details>
+
 ## OpenCore required reading
 
 <img src="https://github.com/acidanthera/OpenCorePkg/blob/master/Docs/Logos/OpenCore_with_text_Small.png" width="200" height="48"/>
