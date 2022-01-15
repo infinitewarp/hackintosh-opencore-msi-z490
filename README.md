@@ -78,6 +78,7 @@ This is not an exhaustive list. It mostly covers use cases I personally use or c
 - :white_check_mark: Wi-Fi and Bluetooth
     - Verified WiFI using 802.11ac with WPA2.
     - Verified Bluetooth using AirDrop to and from real nearby Macs.
+    - Verified Bluetooth works perfectly with Wacom Intuos wireless tablet ([CTL6100WLK0](https://estore.wacom.com/en-US/wacom-intuos-m-bluetooth-black-us-ctl6100wlk0.html))
 - :white_check_mark: Ethernet (at least gigabit)
     - Verified by connecting directly to another over ethernet computer and testing with `iperf3`.
     - The computer on the other end only supports gigabit ethernet, and the test sufficiently maxed that out. I cannot confirm if the full 2.5 Gbps speed is available.
