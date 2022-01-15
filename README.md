@@ -4,6 +4,8 @@ I've successfully installed macOS Catalina and updated to the latest 10.15.7 (19
 
 You can find my `config.plist` in this repository and many notes about current results and my setup process in this document. I carefully followed [Dortania's OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/), [Getting started with ACPI](https://dortania.github.io/Getting-Started-With-ACPI/), [Multiboot with OpenCore](https://dortania.github.io/OpenCore-Multiboot/), and [OpenCore Post-Install](https://dortania.github.io/OpenCore-Post-Install/), and I also had to look up some details in [OpenCore Reference Manual](https://github.com/acidanthera/OpenCorePkg/blob/master/Docs/Configuration.pdf). If you're going to build a system like this, you should also read these documents carefully before starting and keep them nearby during the setup process.
 
+At the time of this writing, the `config.plist` in this repository is identical to what's in my working EFI partition *except* for the fake `MLB`, `ROM`, `SystemSerialNumber`, and `SystemUUID` values here. I have substituted appropriate real or generated values for each of those in my local version.
+
 <img src="https://github.com/infinitewarp/hackintosh-opencore-msi-z490/blob/main/images/screenshot-neofetch.png"/>
 
 ## Hardware
