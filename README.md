@@ -244,3 +244,11 @@ Some specific issues I encountered and resolved include:
     - I stepped through every apparently available ID for my hardware, and these three all seem to function the same way.
     - As mentioned above, this works fine for the rear line-out, but the front line-out is not autodetected when I plug in headphones. Putting the system to sleep and waking it back up triggers whatever hardware refresh is necessary to start using the front line-out again. It's a minor inconvenience, but it's a sufficiently reliable workaround.
     - I tried the `VoohooHDA.kext`, but it wasn't really any better than those options, and Voodoo never seeemed to recognize my front-panel audio ports.
+
+## Current unresolved issues
+
+- Occasionally (not always) during shutdown after all apps have exited, after the window manager has exited, and when the text is on screen (if the verbose boot flag was set), I've seen this system kernel panic. I don't know what could be causing this, but it happens infrequently enough and at a point when nothing is really affected that it doesn't bother me too much. I just reach over and hit the hardware reset button.
+    <details>
+    <summary>photo of panic trace during shutdown</summary>
+    <img src="https://github.com/infinitewarp/hackintosh-opencore-msi-z490/blob/main/images/shutdown-panic.png"/>
+    </details>
